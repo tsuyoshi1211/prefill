@@ -10,10 +10,8 @@
 <body>
         
     <script>
-        var entries = urlParams.entries();
-        for (pair of entries) {
-        console.log(pair[0], pair[1]);
-        }
+        var urlParams = new URLSearchParams(window.location.search);
+        console.log(urlParams.get('param1'));
     </script>
     
 </body>
