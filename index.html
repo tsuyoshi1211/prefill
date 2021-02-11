@@ -13,10 +13,9 @@
         if (default_==null) default_="";
         key = key.replace(/[¥[]/,"¥¥¥[").replace(/[¥]]/,"¥¥¥]");
         var regex = new RegExp("[¥¥?&]"+key+"=([^&#]*)");
-        var qs = regex.exec(window.location.href);
         var key_value = getQuerystring('q');
-    　　console.log('key_value');
-      
+    　　 console.log('key_value');
+        var qs = regex.exec(window.location.href);
         if(qs == null)
             return default_;
         else
