@@ -7,14 +7,26 @@
     
     <script type="text/jscript" language="javascript">
     
-    function getQuerystring(key)
-    
-    {
-        key = key.replace(/[¥[]/,"¥¥¥[").replace(/[¥]]/,"¥¥¥]");
-        var regex = new RegExp("[¥¥?&]"+key+"=([^&#]*)");
-        var key_value = getQuerystring('q');
-    　　 console.log(key_value);
+    (function(){
+    $.QueryString = (function(a) {
+        if (a == "") return {};
+        var b = {};
+        for (var i = 0; i < a.length; ++i)
+        {
+            var p=a[i].split('=');
+            if (p.length != 2) continue;
+            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+        }
+        return b;
+    })(window.location.search.substr(1).split('&amp;'))
+     
+    if (typeof $.QueryString["word"] === "undefined" || $.QueryString["word"].length <= 0 ){
+        document.getElementById("textWord").innerHTML = "パラメーターが指定されてません。";
     }
+    else {
+        $('#textWord').html( $.QueryString["word"] );
+    }
+});
     
     </script>
     
