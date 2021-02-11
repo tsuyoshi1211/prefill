@@ -7,7 +7,7 @@
     <title></title>
     <script type="text/javascript">
         window.onload = function onLoad() {
-            param = GetQueryString();
+            param = GetQueryString(1);
             target = document.getElementById("param");
             target.innerHTML = param["q"];
 
@@ -31,8 +31,6 @@
 
                     // パラメータ名をキーとして連想配列に追加する
                     result[paramName] = decodeURIComponent(paramValue);
-                    // パラメータ名を出力
-                    console.log(paramName[0]);
                     
                 }
                 return result;
