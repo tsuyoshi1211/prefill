@@ -15,7 +15,7 @@
         var regex = new RegExp("[¥¥?&]"+key+"=([^&#]*)");
         var qs = regex.exec(window.location.href);
         var key_value = getQuerystring('q');
-    　　console.log(key_value);
+    　　console.log('key_value');
       
         if(qs == null)
             return default_;
