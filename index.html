@@ -4,15 +4,17 @@
 <html>
     
 <head>
-    
-    <script>
-        var urlParams = new URLSearchParams(window.location.search);
-        console.log(urlParams.get('context_name'));
-    </script>
-    
+
 </head>
     
 <body>
+        
+    <script>
+        var entries = urlParams.entries();
+        for (pair of entries) {
+        console.log(pair[0], pair[1]);
+        }
+    </script>
     
 </body>
     
