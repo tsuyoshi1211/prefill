@@ -24,7 +24,7 @@
                 var result = new Object();
                 for (var i = 0; i < parameters.length; i++) {
                     // パラメータ名とパラメータ値に分割する
-                    var element = parameters[i].split(':');
+                    var element = parameters[i].split('');
 
                     var paramName = decodeURIComponent(element[0]);
                     var paramValue = decodeURIComponent(element[1]);
