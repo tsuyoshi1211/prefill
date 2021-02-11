@@ -6,12 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <script type="text/javascript">
-        window.onload = function onLoad() {
-            param = GetQueryString();
-            target = document.getElementById("param");
-            target.innerHTML = param["value"];
-
-        }
 
         function GetQueryString() {
             if (1 < document.location.search.length) {
@@ -32,8 +26,8 @@
                     // パラメータ名をキーとして連想配列に追加する
                     result[paramName] = decodeURIComponent(paramValue);
                     
-                     console.log(result[0]);
-                     console.log(result.paramName);
+                    console.log(result[context_name]);
+                    
                 }
                 return result;
             }
