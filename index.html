@@ -14,15 +14,14 @@
         key = key.replace(/[¥[]/,"¥¥¥[").replace(/[¥]]/,"¥¥¥]");
         var regex = new RegExp("[¥¥?&]"+key+"=([^&#]*)");
         var qs = regex.exec(window.location.href);
+        var key_value = getQuerystring('q');
+    　　console.log(key_value);
+      
         if(qs == null)
             return default_;
         else
            return qs[1];
-           
-       var key_value = getQuerystring('q');
-    　　console.log(key_value);
     }
-
     
     </script>
     
