@@ -22,7 +22,7 @@ el.setAttribute('src', 'https://webagent.bedore.jp/init.js') //src
 el.setAttribute('charset', 'utf-8')
 el.setAttribute('data-token', '4dd8edc6-bb0a-4457-9594-5e254bd83fad')
 el.setAttribute('data-config-index', '1')
-el.setAttribute('data-slots',[[query]])
+el.setAttribute('data-slots',[query])
 
 //ここまで
 
