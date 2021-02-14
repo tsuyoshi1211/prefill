@@ -18,11 +18,12 @@ const query = JSON.stringify(q)
 const el = document.createElement('script')
 //ここからscriptタグの要素設定
 el.setAttribute('id', 'bedore-webagent')
-el.setAttribute('data-slots',['[query]'])
 el.setAttribute('src', 'https://webagent.bedore.jp/init.js') //src
+el.setAttribute('charset', 'utf-8')
 el.setAttribute('data-token', '4dd8edc6-bb0a-4457-9594-5e254bd83fad')
 el.setAttribute('data-config-index', '1')
-el.setAttribute('charset', 'utf-8')
+el.setAttribute('data-slots',['[query]'])
+
 //ここまで
 
 document.querySelector('head').appendChild(el)
