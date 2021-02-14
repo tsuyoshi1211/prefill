@@ -1,6 +1,6 @@
 function getUrlQueries() {
     const queryStr = window.location.search.slice(1)
-    const queries = {}
+    const queries = '[{}]'
     if (!queryStr) {
         return queries
     }
