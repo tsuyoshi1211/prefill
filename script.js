@@ -14,7 +14,7 @@ const q = getUrlQueries()
 Object.keys(q).forEach(k => {
     q[k] = decodeURI(q[k])
 })
-const query = JSON.stringify([q])
+const query = JSON.stringify('[q]')
 const el = document.createElement('script')
 //ここからscriptタグの要素設定
 el.setAttribute('id', 'bedore-webagent')
